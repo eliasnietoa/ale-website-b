@@ -3527,3 +3527,42 @@ body[data-page="booking"] .hero__media img {
     min-height: 17rem;
   }
 }
+
+/* 2026-03-27 mobile nav fix: z-index, opacity, readability */
+.mobile-nav {
+  z-index: 100;
+}
+
+.mobile-nav::before {
+  background:
+    radial-gradient(circle at 30% 25%, rgba(178, 34, 34, 0.22), transparent 24%),
+    radial-gradient(circle at 75% 70%, rgba(139, 0, 0, 0.2), transparent 22%),
+    rgba(4, 3, 3, 0.98);
+}
+
+body.menu-open .site-header {
+  z-index: 99;
+}
+
+body.menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.mobile-nav__top > a {
+  color: rgba(233, 225, 214, 0.96);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.mobile-nav__label {
+  color: rgba(233, 225, 214, 0.5);
+}
+
+.mobile-nav__links strong {
+  color: rgba(233, 225, 214, 0.94);
+}
+
+.mobile-nav__links span {
+  color: rgba(233, 225, 214, 0.6);
+}
