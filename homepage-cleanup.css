@@ -632,12 +632,12 @@ body[data-page="home"] .footer-nav a {
   }
 
   body[data-page="home"] .bio-spotlight__content::before {
-    top: -0.15rem;
+    top: 1.55rem;
     bottom: -0.2rem;
   }
 
   body[data-page="home"] .bio-spotlight__content::after {
-    top: -0.15rem;
+    top: 1.55rem;
     width: 3.15rem;
   }
 
