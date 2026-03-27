@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cairo Experience Trips | THE NOIR STAGE</title>
+<script type="text/javascript" nonce="ab665d695fda400aaad5f6f730e" src="//local.adguard.org?ts=1774551800289&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzJkZmVkNGU2YjdkZTQ5NmRiZDJkZTJjZDdlZDJlNTU0EgsSBxCn6b26mxkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzkxODE5MjgwMjU5NDk4MTcxMg%26filename%3D%26opi%3D89354086&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="ab665d695fda400aaad5f6f730e" src="//local.adguard.org?ts=1774551800289&amp;name=AdGuard%20Extra&amp;type=user-script"></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#735c00",
+              "on-error": "#690005",
+              "tertiary-fixed": "#e5e2db",
+              "tertiary-fixed-dim": "#c9c6bf",
+              "inverse-surface": "#e5e2e1",
+              "surface-bright": "#393939",
+              "on-background": "#e5e2e1",
+              "outline": "#99907c",
+              "surface-container-low": "#1c1b1b",
+              "inverse-on-surface": "#313030",
+              "tertiary": "#d1cec7",
+              "tertiary-container": "#b5b3ac",
+              "on-secondary": "#690000",
+              "secondary-fixed": "#ffdad4",
+              "surface-container": "#201f1f",
+              "surface-tint": "#e9c349",
+              "background": "#131313",
+              "on-tertiary-fixed-variant": "#474741",
+              "on-primary": "#3c2f00",
+              "error": "#ffb4ab",
+              "primary-container": "#d4af37",
+              "secondary": "#ffb4a8",
+              "primary-fixed-dim": "#e9c349",
+              "outline-variant": "#4d4635",
+              "surface-variant": "#353534",
+              "on-surface": "#e5e2e1",
+              "on-secondary-fixed-variant": "#920703",
+              "primary": "#f2ca50",
+              "surface-container-highest": "#353534",
+              "secondary-fixed-dim": "#ffb4a8",
+              "on-tertiary-fixed": "#1c1c17",
+              "on-secondary-container": "#ff9a8a",
+              "surface-container-high": "#2a2a2a",
+              "secondary-container": "#920703",
+              "surface": "#131313",
+              "on-error-container": "#ffdad6",
+              "on-primary-container": "#554300",
+              "on-primary-fixed": "#241a00",
+              "surface-dim": "#131313",
+              "on-tertiary-container": "#464540",
+              "on-primary-fixed-variant": "#574500",
+              "surface-container-lowest": "#0e0e0e",
+              "error-container": "#93000a",
+              "on-secondary-fixed": "#410000",
+              "primary-fixed": "#ffe088",
+              "on-surface-variant": "#d0c5af",
+              "on-tertiary": "#31312b"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .noir-gradient-overlay {
+            background: linear-gradient(to bottom, rgba(19,19,19,0.2) 0%, rgba(19,19,19,0.9) 100%);
+        }
+        .gold-leaf-border {
+            border-image: linear-gradient(to right, transparent, #d4af37, transparent) 1;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-12 py-6 bg-[#131313]/40 backdrop-blur-xl border-b border-[#d4af37]/15 z-50">
+<div class="text-2xl font-black text-[#d4af37] tracking-tighter font-headline">THE NOIR STAGE</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="font-headline font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Home</a>
+<a class="font-headline font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Artist</a>
+<a class="font-headline font-medium tracking-tight uppercase text-sm text-[#f2ca50] border-b-2 border-[#f2ca50] pb-1 hover:text-[#920703] transition-colors duration-500" href="#">Egypt</a>
+<a class="font-headline font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Services</a>
+<a class="font-headline font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Academy</a>
+<a class="font-headline font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Shop</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="font-headline font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors">Press</button>
+<button class="bg-primary text-on-primary-container px-6 py-2 font-headline font-medium tracking-tight uppercase text-sm hover:bg-primary-container active:scale-95 transition-all duration-300">Booking</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0">
+<img alt="Ancient Pyramids of Giza at sunrise" class="w-full h-full object-cover opacity-60" data-alt="Cinematic wide shot of the Great Pyramids of Giza at sunrise with dramatic golden atmospheric lighting and long shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7A0qLw4uiEo8Eb-MXzxto7j4QZHQimQlin06FkHbibDNulEABsURTr-cQIzz_MIjjT_3ZLCKzClAXOBzuEK4nc56A7RuhTmbBMT7qOe_4UjgI0QZbhgM04UBlvIfruayBvm5gHb93-3xr2h1i4YuZGOwHVwwxhYgmFQdFVAGWHAmqeKSUXCoz4cBezj-TMmt-548Xga1NMCGtmInJWHT2d0LPbrUenxDfAc8nCDPDFanlK_OjjKxlFa5FeuTtaHMeaz4tDKDO_mVj"/>
+<div class="absolute inset-0 noir-gradient-overlay"></div>
+<div class="absolute inset-0 bg-primary/5 mix-blend-overlay"></div>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-12 grid grid-cols-12 gap-8">
+<div class="col-span-12 md:col-span-8">
+<span class="inline-block text-primary font-label text-xs tracking-[0.3em] uppercase mb-6">Boutique Travel Experience</span>
+<h1 class="font-headline text-7xl md:text-9xl font-black text-primary-container leading-tight tracking-tighter mb-8">CAIRO<br/>MAJESTY</h1>
+<p class="font-body text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        An exclusive, curated pilgrimage for the modern dancer. Immerse yourself in the golden age of Egyptian artistry through a lens of absolute luxury and historical reverence.
+                    </p>
+</div>
+</div>
+</section>
+<!-- The Experience Bento -->
+<section class="py-24 bg-surface px-12">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<h2 class="font-headline text-5xl text-primary leading-none">THE IMMERSION</h2>
+<p class="font-label text-xs tracking-[.2em] uppercase text-outline max-w-xs text-right">
+                        Authentic dancer pathways. <br/>Curated by masters.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1 grid-rows-2 h-[800px]">
+<div class="md:col-span-2 row-span-1 relative group overflow-hidden">
+<img alt="Luxury Nile Boat" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Luxury traditional wooden dahabiya boat on the Nile river during golden hour with ornate pillows and silk fabrics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbmZCWBzQVapzpJZhAAXfGTYRSGON6IhdLLR8WvuKoyouNvr7_xVgh7QcSwI88lLEU9YZWie-v9zUd39ayPoqtJawOTbLlJwFW5tibz2BQaw8r83ztYXM4SuWqlAdDttyjRcauLygTKIehhYWsn5uUseGy7hMZoBUKDCZ-JK4bWA2ycq6_-mIAJThrIREEg5VJerJAs0-tTymVjbOeBjaDYZsNSvNatu5kt74YmC-49Nw0lQmkfkZ05fkV1_GC59GeL1fWcYdk85PR"/>
+<div class="absolute inset-0 bg-black/40 p-12 flex flex-col justify-end">
+<h3 class="font-headline text-3xl text-primary mb-2">The Nile Dahabiya</h3>
+<p class="font-body text-on-surface/80 max-w-md">Private sunset voyages along the lifelines of ancient kings.</p>
+</div>
+</div>
+<div class="md:col-span-1 row-span-2 relative group overflow-hidden">
+<img alt="Egyptian Interior" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Extreme close up of ornate gold Egyptian architecture details with dramatic shadows and warm interior lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLiVbbKej4v3w6Biyb-98DwOMXgWJHOcdickI5Sq47m9ccjC5ItcvZxJ8FfSrzvhKxqR50TBrqYLyA7-cDIEJnq2mZP0_3jwZvHay7q4EEJVqzxxzz0LYqz9VKOxaIUZU_ZlfSWIQ60m2FaQv0TK1iG1eKT_7SBBGzJtlFdc04Bh7XKqCjdXWSNnT871UKqRB83WY89ChI4u-RmdGrlrpyQhJ8jT00cDwAoDx9JKpu5keD4uzhnEY309syAE41GASirDLXeXsMxDBH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent p-12 flex flex-col justify-end">
+<span class="text-primary font-label text-xs tracking-widest mb-4">LODGING</span>
+<h3 class="font-headline text-3xl text-primary mb-4">Palatial Living</h3>
+<p class="font-body text-on-surface/80">Rest in 5-star colonial-era suites that echo the footsteps of legends.</p>
+</div>
+</div>
+<div class="md:col-span-2 row-span-1 relative group overflow-hidden">
+<img alt="Belly Dancer in Cairo" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Elegant silhouette of a dancer performing in a grand marble hall with intricate shadows and gold lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrqQ9jLfSp1rGgfpd8N1AMhgREDeWcuibrr79S48K80r7_P6T294pt9pc2CBHsDwBTvwc6oU8HYdojyHX6b3wnTJpbcpJua0yBwwTJPTFiGPVZGpT7Lhad_aWbOlMI04eS0wjdT7yg_OdiOQd4QH677apqc8vaJQ_HUGqVXgcKId_GiXWjAYisp_WyEPfwG7v9Dd-BMbgTtT7xSrB1-q512FcPcxSCXKnTgHtTcWvlYVyVY6Eg8HGhqX3n7aJKniqI3L_5_3AX1pe5"/>
+<div class="absolute inset-0 bg-black/50 p-12 flex flex-col justify-end">
+<h3 class="font-headline text-3xl text-primary mb-2">Master Intensive</h3>
+<p class="font-body text-on-surface/80 max-w-md">Private workshops in historical venues unreachable by the public.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-surface-container-lowest py-32">
+<div class="max-w-4xl mx-auto text-center px-12 border-y border-primary/20 py-24 relative">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-surface-container-lowest px-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="star" data-weight="fill">star</span>
+</div>
+<h2 class="font-headline text-6xl text-primary-container mb-8 tracking-tight">THE NEXT DEPARTURE</h2>
+<p class="font-body text-on-surface-variant text-lg mb-12 max-w-2xl mx-auto italic">
+                    "This is not a vacation. This is a transformation. We don't just see Cairo; we breathe it into our movement."
+                </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<div class="text-left border-l border-primary/30 pl-6 py-2">
+<p class="font-label text-[10px] text-outline uppercase tracking-widest">Upcoming Dates</p>
+<p class="font-headline text-xl text-on-surface">OCT 14 — OCT 28, 2024</p>
+</div>
+<button class="bg-primary text-surface-container-lowest hover:bg-white transition-colors duration-500 font-headline font-bold uppercase tracking-widest px-12 py-5 text-sm">
+                        Join the Next Trip
+                    </button>
+</div>
+</div>
+</section>
+<!-- Services Highlight -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-12 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="space-y-6">
+<div class="h-1 w-12 bg-secondary-container"></div>
+<h4 class="font-headline text-2xl text-primary">Luxury Concierge</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">24/7 private transportation in luxury sedans, handling all permits and exclusive venue access.</p>
+</div>
+<div class="space-y-6">
+<div class="h-1 w-12 bg-secondary-container"></div>
+<h4 class="font-headline text-2xl text-primary">Artistic Direction</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Direct mentorship and personalized feedback sessions on your dance technique throughout the journey.</p>
+</div>
+<div class="space-y-6">
+<div class="h-1 w-12 bg-secondary-container"></div>
+<h4 class="font-headline text-2xl text-primary">Media Legacy</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Professional photography and cinematography sessions at the Pyramids and Old Cairo included.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] border-t border-primary/10">
+<div class="w-full max-w-7xl mx-auto px-12 py-24 flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="space-y-8">
+<div class="text-lg font-bold text-[#d4af37] font-headline">THE CINEMATIC SOVEREIGN</div>
+<p class="font-label text-[10px] tracking-[0.15em] text-[#e5e2e1]/50 uppercase">
+                    © THE CINEMATIC SOVEREIGN. ALL RIGHTS RESERVED.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-4">
+<a class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300" href="#">Instagram</a>
+<a class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300" href="#">YouTube</a>
+<a class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300" href="#">TikTok</a>
+<a class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300" href="#">Dancer to Businesswoman</a>
+<a class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

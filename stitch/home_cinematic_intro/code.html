@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type="text/javascript" nonce="ab665d695fda400aaad5f6f730e" src="//local.adguard.org?ts=1774551800289&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2RhYjlkNjA4MmU2OTQ1ZWFhODViY2IxMGNjYjdlMDZjEgsSBxCn6b26mxkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzkxODE5MjgwMjU5NDk4MTcxMg%26filename%3D%26opi%3D89354086&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="ab665d695fda400aaad5f6f730e" src="//local.adguard.org?ts=1774551800289&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#735c00",
+              "on-error": "#690005",
+              "tertiary-fixed": "#e5e2db",
+              "tertiary-fixed-dim": "#c9c6bf",
+              "inverse-surface": "#e5e2e1",
+              "surface-bright": "#393939",
+              "on-background": "#e5e2e1",
+              "outline": "#99907c",
+              "surface-container-low": "#1c1b1b",
+              "inverse-on-surface": "#313030",
+              "tertiary": "#d1cec7",
+              "tertiary-container": "#b5b3ac",
+              "on-secondary": "#690000",
+              "secondary-fixed": "#ffdad4",
+              "surface-container": "#201f1f",
+              "surface-tint": "#e9c349",
+              "background": "#131313",
+              "on-tertiary-fixed-variant": "#474741",
+              "on-primary": "#3c2f00",
+              "error": "#ffb4ab",
+              "primary-container": "#d4af37",
+              "secondary": "#ffb4a8",
+              "primary-fixed-dim": "#e9c349",
+              "outline-variant": "#4d4635",
+              "surface-variant": "#353534",
+              "on-surface": "#e5e2e1",
+              "on-secondary-fixed-variant": "#920703",
+              "primary": "#f2ca50",
+              "surface-container-highest": "#353534",
+              "secondary-fixed-dim": "#ffb4a8",
+              "on-tertiary-fixed": "#1c1c17",
+              "on-secondary-container": "#ff9a8a",
+              "surface-container-high": "#2a2a2a",
+              "secondary-container": "#920703",
+              "surface": "#131313",
+              "on-error-container": "#ffdad6",
+              "on-primary-container": "#554300",
+              "on-primary-fixed": "#241a00",
+              "surface-dim": "#131313",
+              "on-tertiary-container": "#464540",
+              "on-primary-fixed-variant": "#574500",
+              "surface-container-lowest": "#0e0e0e",
+              "error-container": "#93000a",
+              "on-secondary-fixed": "#410000",
+              "primary-fixed": "#ffe088",
+              "on-surface-variant": "#d0c5af",
+              "on-tertiary": "#31312b"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .noir-gradient-overlay {
+            background: linear-gradient(to bottom, rgba(19, 19, 19, 0.4) 0%, rgba(19, 19, 19, 0.9) 100%);
+        }
+        .gold-leaf-text {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 50%, #99907c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .shadow-stage {
+            box-shadow: 0 40px 60px -20px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-on-secondary">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-12 py-6 bg-[#131313]/40 backdrop-blur-xl border-b border-[#d4af37]/15 z-50">
+<div class="text-2xl font-black text-[#d4af37] tracking-tighter">THE NOIR STAGE</div>
+<div class="hidden md:flex gap-12">
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#f2ca50] border-b-2 border-[#f2ca50] pb-1 hover:text-[#920703] transition-colors duration-500" href="#">Home</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Artist</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Egypt</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Services</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Academy</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Shop</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500">Press</button>
+<button class="bg-secondary-container text-on-background px-8 py-2 font-headline font-bold uppercase tracking-widest text-xs active:scale-95 duration-300">Booking</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex flex-col justify-center items-start px-12 overflow-hidden">
+<!-- Hero Image Background -->
+<div class="absolute inset-0 z-0">
+<img alt="Cinematic stage setting" class="w-full h-full object-cover" data-alt="dramatic low-key lighting portrait of a performer in shadows on a dark stage with golden light leaks and cinematic smoke atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbXQrZcIPPmd04AmQ38BTBn4PXEUCRaaQwCAhN6f1LXXIRZWPONXq9WPCteO3qrf1kKFGmZlBjnRGmOaLDawSP4aFBCijRkShz_jp7TsAFNlfr57SXz2VXaGG51yqjkWe7QE5eedrAtF7ImQMKlGKNn_TdMu4TLPYsP40i0CIhiksv-Ij8WJFPpcUXnj-KLZcSnReA44eWhZMzgZ5i77B2CpC3edarm7_bbCsQYlYlzpB4GE0ozFzizmNgS47k2Vmf-aeDtJ_49mCM"/>
+<div class="absolute inset-0 noir-gradient-overlay"></div>
+</div>
+<div class="relative z-10 max-w-5xl mt-24">
+<span class="label-md uppercase tracking-[0.25em] text-primary mb-6 block font-medium">Performance Artist &amp; Creative Visionary</span>
+<h1 class="font-headline text-7xl md:text-9xl font-black tracking-tighter mb-8 leading-[0.85] gold-leaf-text">
+                    THE NOIR<br/>SOVEREIGN
+                </h1>
+<div class="flex flex-col md:flex-row items-start md:items-center gap-12 mt-12">
+<p class="font-body text-xl md:text-2xl text-on-surface max-w-xl font-light italic leading-relaxed">
+                        "Artistry in Motion. From Cairo to the World."
+                    </p>
+<button class="bg-primary-container text-on-primary-container px-12 py-5 font-headline font-bold uppercase tracking-widest text-sm hover:bg-primary transition-all duration-500 shadow-stage active:scale-95">
+                        Secure Your Experience
+                    </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-50">
+<span class="text-[10px] uppercase tracking-[0.5em] text-primary">Explore</span>
+<div class="w-[1px] h-16 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</section>
+<!-- Asymmetric Narrative Section -->
+<section class="py-48 px-12 bg-surface">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-24 items-center">
+<div class="md:col-span-5 relative">
+<div class="absolute -top-12 -left-12 w-48 h-48 border-t border-l border-primary/20"></div>
+<img alt="Artistic movement" class="w-full grayscale hover:grayscale-0 transition-all duration-1000 border border-primary/10 p-2" data-alt="high contrast black and white photo of a dancer in mid-motion with fabric flowing like liquid against a pitch black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYqSJ0c0Hiob5phibNleYp7QNxuNtFn9s2kYz-NVYHRgY8KaLYrpG_RbyBiip8chjgJj3EVH5bhTN4mz0Hs2qRkeJNOp3nnNwaHyybO4mC-I4zX5vzkU1MISD-h7hXHaaHM9-Oe4Kn6Rn3s5by2waeUL8wqy1d4xhKTPJ8-ox22w_dJ8s4GSk-RpUTOOO1qv8ug6IPZoPNi_4Lf_3gGZnx8uSlg0RnvlIG4PI1ffQqrvORDwDR9dOS0tHepuCEUnsnXLYK2SURXfDv"/>
+</div>
+<div class="md:col-span-6 md:col-start-7">
+<h2 class="font-headline text-5xl text-primary-container mb-12 leading-tight">A Legacy Carved in Shadow and Light</h2>
+<div class="space-y-8 font-body text-on-surface/80 text-lg leading-relaxed max-w-xl">
+<p>Rooted in the ancient majesty of Cairo and refined on the world's most prestigious prosceniums, our vision transcends traditional performance.</p>
+<p>Every movement is a dialogue between the past and the future—a cinematic journey curated for those who demand more than just a show. We provide an awakening.</p>
+</div>
+<div class="mt-16 flex gap-8 border-t border-outline-variant/30 pt-12">
+<div>
+<span class="block text-3xl font-headline text-primary">15+</span>
+<span class="text-[10px] uppercase tracking-widest text-outline">World Tours</span>
+</div>
+<div class="w-[1px] h-12 bg-outline-variant/30"></div>
+<div>
+<span class="block text-3xl font-headline text-primary">127</span>
+<span class="text-[10px] uppercase tracking-widest text-outline">Stage Visions</span>
+</div>
+<div class="w-[1px] h-12 bg-outline-variant/30"></div>
+<div>
+<span class="block text-3xl font-headline text-primary">Cairo</span>
+<span class="text-[10px] uppercase tracking-widest text-outline">Origin Point</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Portfolio Grid -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="px-12 mb-24 flex justify-between items-end">
+<h2 class="font-headline text-6xl text-on-surface uppercase tracking-tighter">The Gallery</h2>
+<a class="font-label text-primary uppercase tracking-widest text-sm border-b border-primary pb-1" href="#">View Archive</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 px-4 h-[1200px] md:h-[800px]">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700" data-alt="cinematic shot of an ornate theater interior with golden balconies and deep red velvet seats under dramatic spotlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCagiY4WfPBF66qC2v2kY7JmA_TVdscZ_asp23qtpnD4Jod8sWLhUqAI7ahRU2SLuTHSKw2Mbc5OtVGD3zkfCoP8fixdOzA2ABnu-sK3QypmsQTptXaUygQgvasFl-2KTUVteQE-uC_0o8n6JRz-Zj3F7NribNybuAp_sUOI30KZ02aetRmOS11M1wTcaLvSj8XiuhWgEUX0hA1ZjKEpt6v8TLv6TI5w3KegPz3_8J42aTX-2JOdaoVe4oBN1vdUFmM5Ls8GR6NT81B"/>
+<div class="absolute bottom-0 left-0 p-8 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-background to-transparent w-full">
+<span class="font-label text-xs uppercase tracking-widest text-primary">Exhibition</span>
+<h3 class="font-headline text-2xl">The Golden Dynasty</h3>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-1 bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700" data-alt="abstract explosion of glitter and gold dust caught in high-speed photography against a dark void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTzHbD7ephfAu2XT_pqg5QvOlpZdNoRU15PJKvARqx0oDlx2x6jf6sR44onuwSMTSPCra9aspy_uVuQvyAnY_hpGaI2YABa3CWE2SCLP4uhE3bJpoVd1ALKYz3ApHZ_DIyVwKLQllOgq5DBgrlGTEgfJVfeb_GyfJyWfzI_WOaJPuG3ECE2QdbU-PCjqxYq9LObuG9kM8SGbhZV9sMy5fI0qWoXV_AsUpUkHSEesIIpqWFRBPUZbiUEnmgwNmziBT9wR51FsgCsNy_"/>
+</div>
+<div class="md:col-span-1 md:row-span-2 bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700" data-alt="silhouette of a performer standing in a single beam of light from above on a foggy stage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFtXXcJWgd8KHb_6373aPaax3CQQuMumYPzmpf4eZW4Ugbnyff0ESWwzfbI-PRRKMvq8wAIHVbNBMX3kfMTcBTa-GwKctW6qi_1YxGQdSClw5aQUjdNBdySksHhZ-5HT6LoWZo2dBl3BjWyUgo_NMO0zjFpcsaDLfUr8wrTxPBX_4KYOuQLgNORY3aBttiyTXeYB_NTDv26-tVVOi0oRgt7I7SMyloMOVoShWZHn_XfH4-Z5_niXKp8lgMvzdXwrFfDVaNy31FwtBE"/>
+</div>
+<div class="md:col-span-1 md:row-span-1 bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700" data-alt="extreme close up of a luxurious silk costume detail with gold embroidery and intricate textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTulUutVQmxZlqjJ3AL6KW-I9TiDPqzpIJKwGVdEijjS60whwlCovBDb4cydu3QBSra5uzIRATkKyFFpqPA5Oy9b84xeFShM9Y8-0-EyjQ9TVXmO041BvS1hnQ9HMQqHqGza0-w_iCreMnvnqBMEGBhWli7Mc-RT8sHNKVDnk8nlNC77iJwYd6n2WlqQpGjKAH-m6EHB7SggHTpylhQH-57Zan_4a30zAvQF5-6SjEIcLKnXGKHeVMAOzusBTflo0Zjp94u4yvAMgn"/>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-48 px-12 bg-surface-dim relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<span class="text-[20rem] font-black text-on-surface leading-none rotate-90 block">NOIR</span>
+</div>
+<div class="max-w-7xl mx-auto">
+<div class="mb-24">
+<h2 class="font-headline text-5xl text-primary mb-4">Mastery Services</h2>
+<p class="font-body text-outline max-w-md">Bespoke performance, education, and creative consulting for the elite.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1px bg-outline-variant/20">
+<div class="bg-surface p-12 hover:bg-surface-container-high transition-colors duration-500">
+<span class="material-symbols-outlined text-primary mb-8" style="font-variation-settings: 'FILL' 1;">theater_comedy</span>
+<h3 class="font-headline text-2xl mb-4">Live Sovereignty</h3>
+<p class="font-body text-on-surface/60 mb-8">Headline performances for high-fashion galas, private estates, and global festivals.</p>
+<button class="font-label text-xs uppercase tracking-widest text-primary-container hover:text-primary">Details</button>
+</div>
+<div class="bg-surface p-12 hover:bg-surface-container-high transition-colors duration-500">
+<span class="material-symbols-outlined text-primary mb-8" style="font-variation-settings: 'FILL' 1;">school</span>
+<h3 class="font-headline text-2xl mb-4">The Academy</h3>
+<p class="font-body text-on-surface/60 mb-8">Masterclasses in movement, stage presence, and the business of the artist.</p>
+<button class="font-label text-xs uppercase tracking-widest text-primary-container hover:text-primary">Enroll</button>
+</div>
+<div class="bg-surface p-12 hover:bg-surface-container-high transition-colors duration-500">
+<span class="material-symbols-outlined text-primary mb-8" style="font-variation-settings: 'FILL' 1;">camera_roll</span>
+<h3 class="font-headline text-2xl mb-4">Creative Direction</h3>
+<p class="font-body text-on-surface/60 mb-8">Visual storytelling and choreography for film, music videos, and editorial campaigns.</p>
+<button class="font-label text-xs uppercase tracking-widest text-primary-container hover:text-primary">Consult</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="relative py-48 text-center px-12 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20" data-alt="mysterious figure walking away through a corridor of light and shadow in an old palace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5fpu9d8Xpnx6BQDRg9391G-S_I8hycV69nw1gkJnkF0EaMgMJG3Zh8pU6iGYaHnMjYB4SvaeLC8LrmXr-uBftV1CE7oEe6kpYDlt6MGghQ0EwtYj-TNGzTz8KhLI95Jt7xEWhhJWHvchDj9YFLuh4eTIVNEjAV4IEwstgjbaID_d99HaFasr0-zVMTua7oz7e5vtfjU32_TF_Ju9uICveBwjN2WD2gHs6fyH3f-dnzRuWteR21Of_xOsPbX2XYP-ugayOjCZilQSe"/>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto">
+<h2 class="font-headline text-6xl text-primary mb-12 italic">Step Onto the Stage</h2>
+<p class="font-body text-xl text-on-surface/80 mb-12">Reservations for the upcoming season are now open. Experience the sovereign blend of tradition and modernity.</p>
+<div class="flex justify-center gap-8">
+<button class="bg-secondary-container text-on-background px-16 py-6 font-headline font-bold uppercase tracking-[0.2em] text-sm hover:brightness-125 transition-all active:scale-95">Inquire Now</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#0e0e0e] w-full py-24">
+<div class="w-full max-w-7xl mx-auto px-12 flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-xs">
+<div class="text-lg font-bold text-[#d4af37] mb-6">THE NOIR STAGE</div>
+<p class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#e5e2e1]/50 leading-relaxed">
+                    Crafting cinematic realities through movement and light since 2012. From the heart of Cairo to the global stage.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#f2ca50]">Connect</span>
+<a class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300" href="#">Instagram</a>
+<a class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300" href="#">YouTube</a>
+<a class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300" href="#">TikTok</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#f2ca50]">Academy</span>
+<a class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300" href="#">Dancer to Businesswoman</a>
+<a class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300" href="#">Contact</a>
+</div>
+<div class="md:text-right">
+<p class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#e5e2e1]/50">© THE CINEMATIC SOVEREIGN. ALL RIGHTS RESERVED.</p>
+</div>
+</div>
+</footer>
+</body></html>

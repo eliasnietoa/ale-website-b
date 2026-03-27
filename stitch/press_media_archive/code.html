@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type="text/javascript" nonce="ab665d695fda400aaad5f6f730e" src="//local.adguard.org?ts=1774551800289&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2UxYTIwZDIyNzcwNDQ2NGZiOTRkZDIxZWRlNmUxODEzEgsSBxCn6b26mxkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzkxODE5MjgwMjU5NDk4MTcxMg%26filename%3D%26opi%3D89354086&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="ab665d695fda400aaad5f6f730e" src="//local.adguard.org?ts=1774551800289&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#735c00",
+              "on-error": "#690005",
+              "tertiary-fixed": "#e5e2db",
+              "tertiary-fixed-dim": "#c9c6bf",
+              "inverse-surface": "#e5e2e1",
+              "surface-bright": "#393939",
+              "on-background": "#e5e2e1",
+              "outline": "#99907c",
+              "surface-container-low": "#1c1b1b",
+              "inverse-on-surface": "#313030",
+              "tertiary": "#d1cec7",
+              "tertiary-container": "#b5b3ac",
+              "on-secondary": "#690000",
+              "secondary-fixed": "#ffdad4",
+              "surface-container": "#201f1f",
+              "surface-tint": "#e9c349",
+              "background": "#131313",
+              "on-tertiary-fixed-variant": "#474741",
+              "on-primary": "#3c2f00",
+              "error": "#ffb4ab",
+              "primary-container": "#d4af37",
+              "secondary": "#ffb4a8",
+              "primary-fixed-dim": "#e9c349",
+              "outline-variant": "#4d4635",
+              "surface-variant": "#353534",
+              "on-surface": "#e5e2e1",
+              "on-secondary-fixed-variant": "#920703",
+              "primary": "#f2ca50",
+              "surface-container-highest": "#353534",
+              "secondary-fixed-dim": "#ffb4a8",
+              "on-tertiary-fixed": "#1c1c17",
+              "on-secondary-container": "#ff9a8a",
+              "surface-container-high": "#2a2a2a",
+              "secondary-container": "#920703",
+              "surface": "#131313",
+              "on-error-container": "#ffdad6",
+              "on-primary-container": "#554300",
+              "on-primary-fixed": "#241a00",
+              "surface-dim": "#131313",
+              "on-tertiary-container": "#464540",
+              "on-primary-fixed-variant": "#574500",
+              "surface-container-lowest": "#0e0e0e",
+              "error-container": "#93000a",
+              "on-secondary-fixed": "#410000",
+              "primary-fixed": "#ffe088",
+              "on-surface-variant": "#d0c5af",
+              "on-tertiary": "#31312b"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .noir-gradient {
+            background: linear-gradient(to bottom, transparent, rgba(19, 19, 19, 0.8) 70%, #131313);
+        }
+        .gold-frame {
+            box-shadow: inset 0 0 0 1px #d4af37;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-12 py-6 bg-[#131313]/40 backdrop-blur-xl border-b border-[#d4af37]/15 z-50">
+<div class="text-2xl font-black text-[#d4af37] tracking-tighter font-headline">THE NOIR STAGE</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Home</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Artist</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Egypt</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Services</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Academy</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#d4af37]/70 hover:text-[#920703] transition-colors duration-500" href="#">Shop</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-sm text-[#f2ca50] border-b-2 border-[#f2ca50] pb-1" href="#">Press</a>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2 border border-[#d4af37]/30 text-[#f2ca50] font-headline uppercase text-xs tracking-widest active:scale-95 transition-all duration-300">Booking</button>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Header -->
+<section class="px-12 mb-24 flex flex-col items-center text-center">
+<span class="label-md uppercase tracking-[0.2em] text-primary mb-4 font-label text-xs">A Lifetime in the Spotlight</span>
+<h1 class="display-lg text-6xl md:text-8xl font-black text-primary-container font-headline tracking-tighter max-w-4xl">Press &amp; Media Archive</h1>
+<div class="mt-8 h-[1px] w-24 bg-gradient-to-r from-transparent via-primary-container to-transparent"></div>
+</section>
+<!-- Museum Grid: Clippings -->
+<section class="px-12 mb-32">
+<div class="flex justify-between items-end mb-12 border-b border-outline-variant/20 pb-6">
+<div>
+<h2 class="font-headline text-3xl text-primary mb-2">The Chronicles</h2>
+<p class="text-on-surface-variant font-light max-w-md">A chronological journey through international publications, documenting a career that began on the stages of Egypt and expanded across the globe.</p>
+</div>
+<div class="hidden md:block text-right">
+<span class="text-outline font-label text-[10px] tracking-widest uppercase">Est. 1998 — Present</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<!-- Archive Card 1: Large Featured -->
+<div class="md:col-span-7 group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container-lowest gold-frame p-4 transition-all duration-700 hover:bg-surface-container">
+<img class="w-full grayscale brightness-75 group-hover:brightness-100 transition-all duration-700" data-alt="vintage high-contrast black and white newspaper clipping with a bold headline and grainy portrait of a young dancer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBFVrturBtDBD_6csdTC1DUBr_U4gHI2JiP0sVWzLWsovvrgPhJw5fVAh5wUyoTrAfkQcDgosH8fJjK8QuVX0pU1PdY8sAs53BSP7IxJOzcFtrd1uK8MFF71toF4A89YUA8htZlYHxVZ5Y1VGK0wGMEt7TXt3T0QyBw6nkwPBwgOaTc0RTmPHd5RQAIHw0foJOsIIaEr2cBT6vSw6l6ATNm9f1IcvjqmJjTWPdwjZ6g39Q8HWCPNIAVdI0gjrrV90DEDRddqmA7aaP"/>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl text-primary-container uppercase tracking-tight">The Cairo Gazette</h3>
+<p class="text-outline font-label text-xs tracking-widest mt-1 uppercase">October 1998 — Egypt</p>
+</div>
+<span class="text-primary text-xl font-headline">01</span>
+</div>
+</div>
+</div>
+<!-- Archive Card 2: Vertical Stack -->
+<div class="md:col-span-5 flex flex-col gap-12">
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container-lowest gold-frame p-3 transition-all duration-700 hover:bg-surface-container">
+<img class="w-full h-80 object-cover grayscale brightness-50 group-hover:brightness-90 transition-all duration-700" data-alt="close up of a vintage glossy magazine cover featuring a dramatic theatrical performance under low-key lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4Tbp0ttJkpTcLWCWXZ1W9CeZUI7suc4E5zcEN9zL0VYpVwgcT5hmo2qBnA4-8LJQAHfXKEDrz5ErovY0r5w3eZzaaEy4_gC5_ndcgIQbpumtHqhn2LTY232a5SQvGU8xgvmBm2aYCKSV6AlIwaHnH_0hFYDiJY8LxXHRHEGebN6K-BPl2FaX_sFJ28QXFQABloNHyjnCMOkvHAWZ0dVoY9Otc3o3dL4vn2MO03J9_q4KFM62fMlq3bnUHY_sTHfDOQyx7-u8Hlugp"/>
+<div class="mt-4">
+<h3 class="font-headline text-lg text-primary-container uppercase">L'Artiste Magazine</h3>
+<p class="text-outline font-label text-[10px] tracking-[0.2em] mt-1 uppercase">Paris Issue — 2005</p>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container-lowest gold-frame p-3 transition-all duration-700 hover:bg-surface-container">
+<img class="w-full h-80 object-cover grayscale brightness-50 group-hover:brightness-90 transition-all duration-700" data-alt="dramatic lighting on a contemporary newspaper layout showing a stage performance in monochrome with sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7Goq2B3rF1bip_P-ugAu4HcqcyWj850G6AGmfjP94UYuPZTUXaBeRoSlStYYJFTROEjmiCbHdL4IRlt8OOM0lKY6vjobXrv7TBnqDU-JFIAgY-2fDdAYhkox9XcGdD5qRkUBLhY89MW9amaGC8PHUm5gFXDVWjGkse3wbqnV5_TB8Qg10KTNILimMkC-zDnuU1k8rCQJzWTVBdsq7-QgWDG9AuyFRcgPGXfMvtBkA7_XTrszettSTbaGctNOLuSAUX7Dhyts0sRaT"/>
+<div class="mt-4">
+<h3 class="font-headline text-lg text-primary-container uppercase">Al-Ahram Weekly</h3>
+<p class="text-outline font-label text-[10px] tracking-[0.2em] mt-1 uppercase">Cultural Section — 2012</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Press Photos: Horizontal Scroll/Bento -->
+<section class="bg-surface-container-lowest py-32 px-12">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-8">
+<div class="text-center md:text-left">
+<h2 class="font-headline text-5xl text-primary-container tracking-tighter italic">Press Imagery</h2>
+<p class="text-on-surface-variant font-light mt-2">Authorized high-resolution assets for media use.</p>
+</div>
+<button class="bg-secondary-container text-on-background px-12 py-5 font-headline uppercase text-sm tracking-[0.25em] flex items-center gap-3 active:opacity-80 transition-all duration-300">
+                        Download Press Kit
+                        <span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="col-span-2 row-span-2 overflow-hidden bg-surface gold-frame">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-700" data-alt="high fashion editorial portrait of a woman in theatrical costume, dramatic chiaroscuro lighting, deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoenjDS0qB7ES4KNUibw5NBGHLmv58g_bvTnNQlzzOJ6CJJv90kflNEwNTVBx17nL8Lcmh-PD0ko26J7f6KOrKJ2JHUv1-QRKUVHAb7dfLwzQ6EWCIQ8vgnQ3eAGxuasGGu7YktixsSExglZzOYISXL_7yW_a8d_84AOESosBoKz4SLZ0vXFP55zMmBN-SXYLLYg78N3lKt6wQn2B8C4-BtyKaRlxFhOz9SAPvcxxidluKf4lVMOcHaHHqava4T6J_fkiq2uetXdLH"/>
+</div>
+<div class="overflow-hidden bg-surface gold-frame">
+<img class="w-full h-64 object-cover opacity-60 hover:opacity-100 transition-opacity duration-700" data-alt="cinematic close up of stage performance hands, golden jewelry, dark velvet background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK7bJe5UByBX2PXFzHdUJF6Rct_ZetKQf9VBPpiDO9OEdeVZXl5NH4TNaXZFVpBhc4FGmkyVmvWtaZaWF3PQNorFjQh7NHu2s0AqcJual79kiF2bLJzHcP-c2NvzQdtI3x5KkLZlJn8P0y5-TqIBBX3P_9-Q3SPUwghVYj3_1YpvVGEb7dn0BcdEEf8wTarg1W1TENre0OiO_qjGIGTMXMrFl_izTSIdoExWE0PPnifsA85toHqzgm7EFsVhRavC0pP0QPoI-A_LlE"/>
+</div>
+<div class="overflow-hidden bg-surface gold-frame">
+<img class="w-full h-64 object-cover opacity-60 hover:opacity-100 transition-opacity duration-700" data-alt="silhouette of a performer on stage under a single golden spotlight, heavy atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtGxoVtyKAtqDuR0MlIispM_dmiXmcs7N0cN_cIVD-hBkg8Hc-3Pr1j7MXYtGnMiI3IdEFvGlXkk-V1BttKkJQ66E26sx5zS8dyLAL6hrJwsvOfR6qVNo1smlZgGpU9pMK30NcyXNH7RYNxI1xsLKDF4tFgi1TrDRUsW-xyj8fnog8qQRMsbaHSjQ_Ktym_hp_C9yAuhjR77kz-E3T3bUotYiY_WK2ETdRHat7MzomO324R9XO_sVWB8NZLJv2m3V6nyly2UXBlhcv"/>
+</div>
+<div class="col-span-2 overflow-hidden bg-surface gold-frame">
+<img class="w-full h-64 object-cover opacity-60 hover:opacity-100 transition-opacity duration-700" data-alt="theatrical stage curtains and low floor lighting in a grand empty opera house, dark and moody" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCubVqEC7aZ8rM8E-o8NYlyDC2DsdR_jOkoB2HaA0JbARbNnthbeN_r6Vdx7N3fyXD8jW6Y04tQ8H2O3LRF3gREzNePqTKEGmJ4D7hVZ3p9LauP6VpOtiTNA4d_pZOIZz_SjiyHl_lMIlwba8vhbJIZJtCquGBUWKFdr_9AebqsARA0B_mcF0EkhhWNnve6GOEaomyHxsOSjmC1DMgzX-Qp93GO8uZdNTmnPcR8ZKYePZg_klsl9ENekhEX_IPcfddzMvifbVo0BzL"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Museum Quote Section -->
+<section class="py-32 px-12 flex flex-col items-center justify-center bg-surface relative overflow-hidden">
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at center, #d4af37 0.5px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="relative z-10 max-w-3xl text-center">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-8" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="font-headline text-3xl md:text-4xl text-on-surface leading-tight mb-8 italic">"A career built on the intersection of ancient discipline and modern performance. Every headline is a footprint."</p>
+<div class="text-primary font-label tracking-[0.3em] uppercase text-xs">The Cinematic Sovereign Archive</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] border-t border-outline-variant/10">
+<div class="w-full max-w-7xl mx-auto px-12 py-24 flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="flex flex-col gap-6">
+<div class="text-lg font-bold text-[#d4af37] font-headline">THE NOIR STAGE</div>
+<p class="text-[10px] text-[#e5e2e1]/50 font-['Manrope'] uppercase tracking-[0.15em] max-w-xs leading-relaxed">
+                    CURATING THE ESSENCE OF PERFORMANCE THROUGH CINEMATIC DEPTH AND SOVEREIGN ARTISTRY.
+                </p>
+</div>
+<div class="flex flex-wrap gap-x-12 gap-y-6">
+<div class="flex flex-col gap-4">
+<span class="text-[#d4af37] font-['Manrope'] uppercase tracking-[0.15em] text-[10px] font-bold">Connect</span>
+<a class="text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300 font-['Manrope'] uppercase tracking-[0.15em] text-[10px]" href="#">Instagram</a>
+<a class="text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300 font-['Manrope'] uppercase tracking-[0.15em] text-[10px]" href="#">YouTube</a>
+<a class="text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300 font-['Manrope'] uppercase tracking-[0.15em] text-[10px]" href="#">TikTok</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-[#d4af37] font-['Manrope'] uppercase tracking-[0.15em] text-[10px] font-bold">Programs</span>
+<a class="text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300 font-['Manrope'] uppercase tracking-[0.15em] text-[10px]" href="#">Dancer to Businesswoman</a>
+<a class="text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300 font-['Manrope'] uppercase tracking-[0.15em] text-[10px]" href="#">Academy</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-[#d4af37] font-['Manrope'] uppercase tracking-[0.15em] text-[10px] font-bold">Inquiries</span>
+<a class="text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300 font-['Manrope'] uppercase tracking-[0.15em] text-[10px]" href="#">Contact</a>
+<a class="text-[#e5e2e1]/50 hover:text-[#920703] transition-all duration-300 font-['Manrope'] uppercase tracking-[0.15em] text-[10px]" href="#">Booking</a>
+</div>
+</div>
+</div>
+<div class="w-full px-12 py-8 border-t border-outline-variant/5 text-center">
+<p class="font-['Manrope'] uppercase tracking-[0.15em] text-[10px] text-[#e5e2e1]/30">© THE CINEMATIC SOVEREIGN. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+</body></html>
