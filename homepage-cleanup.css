@@ -1,0 +1,408 @@
+/* Homepage / header / footer premium cleanup pass */
+
+:root {
+  --home-shell: min(1120px, calc(100% - 2.4rem));
+  --section-space: clamp(4rem, 7vw, 6.6rem);
+  --card-border: rgba(201, 152, 42, 0.12);
+  --card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.032), rgba(255, 255, 255, 0.012)), linear-gradient(135deg, rgba(92, 10, 18, 0.08), rgba(0, 0, 0, 0));
+}
+
+body[data-page="home"] .shell,
+body[data-page="home"] .site-header__shell,
+body[data-page="home"] .footer-shell,
+body[data-page="home"] .footer-meta {
+  width: var(--home-shell);
+}
+
+body[data-page="home"] .site-header {
+  padding-block: 0.85rem;
+  background: linear-gradient(180deg, rgba(9, 9, 10, 0.9), rgba(9, 9, 10, 0.34));
+  border-bottom: 1px solid rgba(201, 152, 42, 0.08);
+}
+
+body[data-page="home"] .site-header.is-scrolled {
+  padding-block: 0.72rem;
+  background: rgba(10, 10, 11, 0.92);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+}
+
+body[data-page="home"] main {
+  padding-top: 4.55rem;
+}
+
+body[data-page="home"] .section {
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+}
+
+body[data-page="home"] .hero {
+  min-height: min(100svh, 56rem);
+}
+
+body[data-page="home"] .hero__content {
+  padding-top: clamp(6.8rem, 12vh, 8.6rem);
+  padding-bottom: clamp(2.8rem, 7vh, 4.8rem);
+}
+
+body[data-page="home"] .hero__content--centered {
+  width: min(100%, 56rem);
+  gap: 0.82rem;
+}
+
+body[data-page="home"] .hero__subtitle {
+  margin-bottom: 0.2rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+}
+
+body[data-page="home"] .display--home-intro {
+  max-width: 9.4ch;
+  font-size: clamp(2.8rem, 4.8vw, 4.95rem);
+  line-height: 0.93;
+}
+
+body[data-page="home"] .hero-categories {
+  gap: 0.55rem;
+  margin-top: 0.65rem;
+}
+
+body[data-page="home"] .hero-categories span {
+  padding: 0.42rem 0.68rem;
+  font-size: 0.61rem;
+  letter-spacing: 0.16em;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+}
+
+body[data-page="home"] .hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.45rem;
+}
+
+body[data-page="home"] .hero-button,
+body[data-page="home"] .button-link {
+  min-height: 2.9rem;
+  padding: 0.88rem 1.12rem;
+  font-size: 0.67rem;
+  letter-spacing: 0.17em;
+}
+
+body[data-page="home"] .button-link--ghost {
+  background: rgba(14, 12, 12, 0.52);
+  border: 1px solid rgba(201, 152, 42, 0.14);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+body[data-page="home"] .home-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-bottom: 1.1rem;
+}
+
+body[data-page="home"] .home-fact,
+body[data-page="home"] .service-card-home,
+body[data-page="home"] .press-feature,
+body[data-page="home"] .calendar-card {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-soft);
+}
+
+body[data-page="home"] .home-fact {
+  padding: 1rem 1.05rem;
+  gap: 0.4rem;
+}
+
+body[data-page="home"] .home-fact span {
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+}
+
+body[data-page="home"] .home-fact strong {
+  font-size: 1rem;
+  line-height: 1.08;
+}
+
+body[data-page="home"] .section-heading,
+body[data-page="home"] .bio-spotlight__content {
+  padding-left: 1rem;
+}
+
+body[data-page="home"] .section-heading::after,
+body[data-page="home"] .bio-spotlight__content::after {
+  width: 4rem;
+}
+
+body[data-page="home"] .title {
+  font-size: clamp(2rem, 3.5vw, 3.65rem);
+  line-height: 0.97;
+}
+
+body[data-page="home"] .copy,
+body[data-page="home"] .footer-note,
+body[data-page="home"] .service-card-home__body p,
+body[data-page="home"] .calendar-card p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+body[data-page="home"] .proof-strip {
+  padding-block: 0.2rem;
+}
+
+body[data-page="home"] .proof-strip__track {
+  gap: 1.25rem;
+}
+
+body[data-page="home"] .proof-strip__item {
+  font-size: 0.64rem;
+  letter-spacing: 0.22em;
+}
+
+body[data-page="home"] .service-grid-home {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.95rem;
+}
+
+body[data-page="home"] .service-card-home__body {
+  gap: 0.62rem;
+  padding: 0.98rem;
+}
+
+body[data-page="home"] .service-card-home__body h3 {
+  font-size: clamp(1.22rem, 1.4vw, 1.46rem);
+  line-height: 0.98;
+}
+
+body[data-page="home"] .editorial-press,
+body[data-page="home"] .map-showcase,
+body[data-page="home"] .shop-endcap,
+body[data-page="home"] .bio-spotlight {
+  gap: clamp(1.2rem, 2.4vw, 2.25rem);
+}
+
+body[data-page="home"] .press-feature {
+  padding: clamp(1.2rem, 2vw, 1.85rem);
+}
+
+body[data-page="home"] .press-feature blockquote {
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+}
+
+body[data-page="home"] .map-canvas {
+  min-height: 25rem;
+  box-shadow: var(--shadow-soft);
+}
+
+body[data-page="home"] .map-cities {
+  gap: 0.55rem;
+}
+
+body[data-page="home"] .map-cities span {
+  padding: 0.58rem 0.82rem;
+  font-size: 0.66rem;
+}
+
+body[data-page="home"] .calendar-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+body[data-page="home"] .calendar-card {
+  padding: 1.05rem;
+  gap: 0.65rem;
+}
+
+body[data-page="home"] .calendar-card span {
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+}
+
+body[data-page="home"] .calendar-card strong {
+  font-size: clamp(1.18rem, 1.8vw, 1.42rem);
+}
+
+body[data-page="home"] .shop-endcap__media,
+body[data-page="home"] .bio-spotlight__portrait,
+body[data-page="home"] .section--pause .image-pause {
+  box-shadow: 0 28px 72px rgba(0, 0, 0, 0.32);
+}
+
+body[data-page="home"] .shop-endcap__media {
+  min-height: 24rem;
+}
+
+body[data-page="home"] .site-footer {
+  padding: 5rem 0 2rem;
+}
+
+body[data-page="home"] .footer-shell {
+  gap: 1.7rem;
+}
+
+body[data-page="home"] .footer-rail {
+  padding-bottom: 0.9rem;
+}
+
+body[data-page="home"] .footer-kicker,
+body[data-page="home"] .footer-contact,
+body[data-page="home"] .footer-label,
+body[data-page="home"] .footer-meta {
+  font-size: 0.64rem;
+  letter-spacing: 0.2em;
+}
+
+body[data-page="home"] .footer-nav {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, auto));
+  justify-content: center;
+  gap: 0.7rem 0.95rem;
+}
+
+body[data-page="home"] .footer-nav a {
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+}
+
+@media (max-width: 1100px) {
+  body[data-page="home"] .service-grid-home {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  body[data-page="home"] .footer-nav {
+    grid-template-columns: repeat(4, minmax(0, auto));
+  }
+}
+
+@media (max-width: 900px) {
+  body[data-page="home"] .home-facts,
+  body[data-page="home"] .service-grid-home,
+  body[data-page="home"] .calendar-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body[data-page="home"] .footer-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  body[data-page="home"] .map-canvas,
+  body[data-page="home"] .shop-endcap__media {
+    min-height: 21rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --home-shell: calc(100% - 1rem);
+  }
+
+  body[data-page="home"] main {
+    padding-top: 4.15rem;
+  }
+
+  body[data-page="home"] .hero {
+    min-height: auto;
+  }
+
+  body[data-page="home"] .hero__content {
+    padding-top: 6.05rem;
+    padding-bottom: 2rem;
+  }
+
+  body[data-page="home"] .hero__content--centered {
+    gap: 0.68rem;
+    padding-inline: 0.65rem;
+  }
+
+  body[data-page="home"] .display--home-intro {
+    max-width: 7.8ch;
+    font-size: clamp(2rem, 8.4vw, 3.05rem);
+  }
+
+  body[data-page="home"] .hero__subtitle {
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+  }
+
+  body[data-page="home"] .hero-categories {
+    gap: 0.42rem;
+    margin-top: 0.45rem;
+  }
+
+  body[data-page="home"] .hero-categories span {
+    padding: 0.34rem 0.52rem;
+    font-size: 0.52rem;
+    letter-spacing: 0.12em;
+  }
+
+  body[data-page="home"] .hero__actions {
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  body[data-page="home"] .hero__actions a {
+    width: 100%;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.78rem 0.92rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.14em;
+  }
+
+  body[data-page="home"] .home-facts,
+  body[data-page="home"] .service-grid-home,
+  body[data-page="home"] .calendar-list,
+  body[data-page="home"] .footer-nav {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="home"] .home-fact,
+  body[data-page="home"] .calendar-card,
+  body[data-page="home"] .service-card-home__body {
+    padding: 0.9rem;
+  }
+
+  body[data-page="home"] .section-heading,
+  body[data-page="home"] .bio-spotlight__content {
+    padding-left: 0.72rem;
+  }
+
+  body[data-page="home"] .title {
+    font-size: clamp(1.55rem, 6.8vw, 2.3rem);
+  }
+
+  body[data-page="home"] .copy,
+  body[data-page="home"] .footer-note,
+  body[data-page="home"] .service-card-home__body p,
+  body[data-page="home"] .calendar-card p {
+    font-size: 0.84rem;
+    line-height: 1.52;
+  }
+
+  body[data-page="home"] .service-card-home__body h3,
+  body[data-page="home"] .calendar-card strong,
+  body[data-page="home"] .home-fact strong {
+    font-size: 1.06rem;
+  }
+
+  body[data-page="home"] .map-canvas,
+  body[data-page="home"] .shop-endcap__media,
+  body[data-page="home"] .section--pause .image-pause {
+    min-height: 18rem;
+  }
+
+  body[data-page="home"] .footer-rail,
+  body[data-page="home"] .footer-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  body[data-page="home"] .footer-nav a {
+    text-align: left;
+  }
+}
