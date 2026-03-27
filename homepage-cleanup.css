@@ -35,6 +35,11 @@ body[data-page="home"] .section {
   padding-bottom: var(--section-space);
 }
 
+body[data-page="home"] .section--pause {
+  margin-top: -6.5rem;
+  padding-top: 8.5rem;
+}
+
 body[data-page="home"] .hero {
   min-height: min(100svh, 50rem);
 }
@@ -306,6 +311,18 @@ body[data-page="home"] .section--map::after {
   pointer-events: none;
 }
 
+body[data-page="home"] .hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 12rem;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0.18) 24%, rgba(10, 10, 10, 0.48) 62%, rgba(20, 12, 9, 0.9));
+  pointer-events: none;
+  z-index: 2;
+}
+
 body[data-page="home"] .shop-endcap__media {
   min-height: 24rem;
 }
@@ -383,8 +400,13 @@ body[data-page="home"] .footer-nav a {
   }
 
   body[data-page="home"] .hero__content {
-    padding-top: 4.15rem;
-    padding-bottom: 0.5rem;
+    padding-top: 3.95rem;
+    padding-bottom: 0.35rem;
+  }
+
+  body[data-page="home"] .section--pause {
+    margin-top: -7.25rem;
+    padding-top: 8.2rem;
   }
 
   body[data-page="home"] .hero__content--centered {
