@@ -588,9 +588,23 @@ body[data-page="home"] .footer-nav a {
     grid-template-columns: 1fr;
   }
 
+  body[data-page="home"] .press-feature {
+    text-align: center;
+    justify-items: center;
+  }
+
   body[data-page="home"] .press-feature blockquote {
     max-width: 8ch;
     font-size: clamp(1.55rem, 7vw, 2.15rem);
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  body[data-page="home"] .press-feature__meta,
+  body[data-page="home"] .press-feature__links {
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   body[data-page="home"] .press-feature,
