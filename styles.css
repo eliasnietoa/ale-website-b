@@ -4082,3 +4082,97 @@ body.menu-open .nav-toggle {
     font-size: 0.74rem;
   }
 }
+
+/* 2026-03-27 map refresh: real visible map with city dots */
+.map-canvas {
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(12, 12, 13, 0.88), rgba(8, 8, 9, 0.96)),
+    url('./world-map-badra.svg') center/cover no-repeat;
+  border: 1px solid rgba(201, 152, 42, 0.14);
+}
+
+.map-canvas::before {
+  inset: 0;
+  border: 0;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(201, 152, 42, 0.12), transparent 22%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.26));
+  z-index: 0;
+}
+
+.map-canvas::after {
+  display: none;
+}
+
+.map-dot {
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.38rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(11, 11, 12, 0.82);
+  border: 1px solid rgba(201, 152, 42, 0.16);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+  color: rgba(237, 225, 211, 0.96);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.map-dot::before {
+  width: 0.72rem;
+  height: 0.72rem;
+  background: radial-gradient(circle, #EDE1D3 0 26%, #C9982A 27% 62%, rgba(201, 152, 42, 0.18) 63% 100%);
+  box-shadow: 0 0 0 0.42rem rgba(201, 152, 42, 0.10);
+}
+
+.map-dot--london { top: 27%; left: 43.5%; }
+.map-dot--paris { top: 33%; left: 45%; }
+.map-dot--cairo { top: 48%; left: 54.5%; }
+.map-dot--dubai { top: 45%; left: 64.5%; }
+
+@media (max-width: 720px) {
+  .map-canvas {
+    min-height: 19rem;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .map-dot {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    padding: 0.28rem 0.5rem;
+    gap: 0.38rem;
+  }
+
+  .map-dot::before {
+    width: 0.56rem;
+    height: 0.56rem;
+    box-shadow: 0 0 0 0.3rem rgba(201, 152, 42, 0.10);
+  }
+
+  .map-dot--london { top: 28%; left: 36%; }
+  .map-dot--paris { top: 35%; left: 37%; }
+  .map-dot--cairo { top: 50%; left: 48%; }
+  .map-dot--dubai { top: 46%; left: 62%; }
+}
+
+@media (max-width: 480px) {
+  .map-canvas {
+    min-height: 17rem;
+    border-radius: 18px;
+  }
+
+  .map-dot {
+    font-size: 0.54rem;
+    letter-spacing: 0.08em;
+    padding: 0.24rem 0.42rem;
+  }
+
+  .map-dot--london { top: 30%; left: 32%; }
+  .map-dot--paris { top: 37%; left: 34%; }
+  .map-dot--cairo { top: 52%; left: 46%; }
+  .map-dot--dubai { top: 48%; left: 60%; }
+}
