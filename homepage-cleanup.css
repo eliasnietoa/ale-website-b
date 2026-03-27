@@ -84,13 +84,13 @@ body[data-page="home"] .hero__actions {
 body[data-page="home"] .hero-button,
 body[data-page="home"] .button-link {
   min-height: auto;
-  padding: 0.36rem 0;
+  padding: 0.52rem 0.9rem;
   font-size: 0.68rem;
   letter-spacing: 0.16em;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  border-radius: 0;
+  background: rgba(12, 11, 11, 0.18);
+  border: 1px solid rgba(201, 152, 42, 0.22);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
   color: var(--ivory);
   justify-content: center;
 }
@@ -105,9 +105,9 @@ body[data-page="home"] .hero-button {
 }
 
 body[data-page="home"] .button-link--ghost {
-  background: transparent;
-  border: 0;
-  box-shadow: none;
+  background: rgba(12, 11, 11, 0.12);
+  border: 1px solid rgba(237, 225, 211, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 body[data-page="home"] .home-facts {
@@ -265,7 +265,20 @@ body[data-page="home"] .shop-endcap__media,
 body[data-page="home"] .service-card-home img,
 body[data-page="home"] .map-stage {
   border-radius: 0;
-  overflow: visible;
+  overflow: hidden;
+}
+
+body[data-page="home"] .image-pause::after,
+body[data-page="home"] .bio-spotlight__portrait::after,
+body[data-page="home"] .shop-endcap__media::after,
+body[data-page="home"] .service-card-home::after,
+body[data-page="home"] .map-stage::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 32%;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0.22) 38%, rgba(10, 10, 10, 0.74));
+  pointer-events: none;
 }
 
 body[data-page="home"] .section,
@@ -285,8 +298,10 @@ body[data-page="home"] .section--map::after {
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 9rem;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0.26) 38%, rgba(10, 10, 10, 0.56) 68%, rgba(10, 10, 10, 0.86));
+  height: 12rem;
+  background:
+    linear-gradient(180deg, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0.16) 26%, rgba(10, 10, 10, 0.44) 58%, rgba(10, 10, 10, 0.84)),
+    radial-gradient(circle at center bottom, rgba(0, 0, 0, 0.18), transparent 62%);
   pointer-events: none;
 }
 
@@ -408,7 +423,7 @@ body[data-page="home"] .footer-nav a {
     min-width: auto;
     justify-content: center;
     min-height: auto;
-    padding: 0.28rem 0;
+    padding: 0.42rem 0.72rem;
     font-size: 0.58rem;
     letter-spacing: 0.12em;
   }
