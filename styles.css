@@ -3614,3 +3614,65 @@ body.menu-open .mobile-nav {
     height: 100dvh;
   }
 }
+
+/* 2026-03-27 mobile nav fix 4: hide site behind menu + stronger effect */
+@media (max-width: 960px) {
+  body.menu-open main,
+  body.menu-open .site-footer {
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  body.menu-open .site-grain,
+  body.menu-open .site-vignette {
+    opacity: 0;
+  }
+
+  main,
+  .site-footer,
+  .site-grain,
+  .site-vignette {
+    transition: opacity 220ms ease;
+  }
+
+  .mobile-nav {
+    backdrop-filter: blur(18px);
+  }
+
+  .mobile-nav::before {
+    background:
+      radial-gradient(circle at 18% 16%, rgba(146, 7, 3, 0.28), transparent 24%),
+      radial-gradient(circle at 78% 72%, rgba(212, 175, 55, 0.10), transparent 28%),
+      linear-gradient(180deg, rgba(5, 4, 4, 0.985), rgba(8, 6, 6, 0.99));
+  }
+
+  .mobile-nav__panel {
+    padding: 5.4rem 1.25rem 1.4rem;
+  }
+
+  .mobile-nav__top {
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .mobile-nav__top > a {
+    font-size: clamp(2.15rem, 8.8vw, 3rem);
+    line-height: 0.92;
+  }
+
+  .mobile-nav__links a {
+    padding: 0.2rem 0 0.8rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.10);
+  }
+
+  .mobile-nav__links strong {
+    font-size: 0.95rem;
+    letter-spacing: 0.11em;
+  }
+
+  .mobile-nav__links span {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+}
