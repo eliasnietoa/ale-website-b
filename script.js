@@ -233,22 +233,16 @@ const renderDesktopNav = () =>
 const renderMobileNav = () => `
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
     <div class="mobile-nav__panel">
-      <div class="mobile-nav__top">
-        ${navConfig
-          .map(
-            (item) => `
-              <a class="${activePage === item.key ? "is-current" : ""}" href="${item.href}" ${activePage === item.key ? 'aria-current="page"' : ""}>${item.label}</a>
-            `
-          )
-          .join("")}
-        <a class="mobile-nav__cta" href="./booking.html">Work With Badra</a>
+      <div class="mobile-nav__header">
+        <p class="mobile-nav__eyebrow">Navigation</p>
+        <button class="mobile-nav__close" type="button" aria-label="Close menu">Close</button>
       </div>
       <div class="mobile-nav__sections">
         ${navConfig
           .map(
             (item) => `
               <section class="mobile-nav__section">
-                <p class="mobile-nav__label">${item.label}</p>
+                <a class="mobile-nav__section-title ${activePage === item.key ? "is-current" : ""}" href="${item.href}" ${activePage === item.key ? 'aria-current="page"' : ""}>${item.label}</a>
                 <div class="mobile-nav__links">
                   ${item.drawer
                     .flatMap((section) => section.links)
@@ -266,6 +260,7 @@ const renderMobileNav = () => `
             `
           )
           .join("")}
+        <a class="mobile-nav__cta" href="./booking.html">Work With Badra</a>
       </div>
     </div>
   </div>
@@ -445,6 +440,7 @@ if (footerRoot) {
 
 const toggle = document.querySelector(".nav-toggle");
 const mobileNav = document.querySelector(".mobile-nav");
+const closeMenuButton = document.querySelector(".mobile-nav__close");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const setMenuState = (open) => {
@@ -462,8 +458,18 @@ if (toggle && mobileNav) {
     setMenuState(!document.body.classList.contains("menu-open"));
   });
 
+  if (closeMenuButton) {
+    closeMenuButton.addEventListener("click", () => setMenuState(false));
+  }
+
   mobileNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => setMenuState(false));
+  });
+
+  mobileNav.addEventListener("click", (event) => {
+    if (event.target === mobileNav) {
+      setMenuState(false);
+    }
   });
 
   window.addEventListener("keydown", (event) => {
