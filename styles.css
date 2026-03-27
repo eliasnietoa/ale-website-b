@@ -3394,3 +3394,136 @@ body[data-page="booking"] .hero__media img {
     width: 2.8rem;
   }
 }
+
+/* 2026-03-27 mobile-first polish: hero box, services, global spacing */
+@media (max-width: 480px) {
+  /* Hero: remove visible box on small phones */
+  .hero__content--centered::before {
+    border-color: transparent;
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  .hero__content--centered::after {
+    display: none;
+  }
+
+  /* Hero text: tighter on small screens */
+  .display--home-intro {
+    max-width: 9ch;
+    font-size: clamp(2.4rem, 10vw, 3.6rem);
+  }
+
+  .display {
+    font-size: clamp(2.2rem, 10vw, 3.4rem);
+  }
+
+  .title {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+  }
+
+  /* Hero padding reduced */
+  body[data-page="home"] .hero__content {
+    padding-top: max(10vh, 6rem);
+    padding-bottom: 2rem;
+  }
+
+  .hero__content--centered {
+    gap: 0.75rem;
+    padding-inline: 1rem;
+  }
+
+  /* Hero categories: compact */
+  .hero-categories {
+    gap: 0.4rem;
+    margin-top: 0.7rem;
+  }
+
+  .hero-categories span {
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    padding: 0.38rem 0.5rem;
+  }
+
+  /* Section spacing: reduced */
+  .section {
+    padding-top: clamp(3rem, 7vw, 4.5rem);
+    padding-bottom: clamp(3rem, 7vw, 4.5rem);
+  }
+
+  /* Service cards: compact */
+  .service-card-home__body {
+    padding: 0.9rem;
+    gap: 0.55rem;
+  }
+
+  .service-card-home__body h3 {
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+  }
+
+  .service-card-home__body p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .service-card-home img {
+    aspect-ratio: 4 / 3.2;
+  }
+
+  /* Service overview cards: compact */
+  .service-overview-card {
+    padding: 1rem;
+    gap: 0.6rem;
+  }
+
+  .service-overview-card strong {
+    font-size: 1.2rem;
+  }
+
+  /* Calendar cards */
+  .calendar-card {
+    padding: 1rem;
+    gap: 0.55rem;
+  }
+
+  .calendar-card strong {
+    font-size: 1.2rem;
+  }
+
+  /* Copy and lede */
+  .lede {
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
+
+  .copy {
+    font-size: 0.9rem;
+    line-height: 1.58;
+  }
+
+  /* Shell tighter */
+  .shell {
+    width: calc(100% - 1rem);
+  }
+
+  /* Proof strip */
+  .proof-strip__item {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+  }
+
+  /* Map canvas smaller */
+  .map-canvas {
+    min-height: 18rem;
+  }
+
+  /* Bio/media portrait smaller */
+  .bio-spotlight__portrait,
+  .image-pause,
+  .shop-endcap__media,
+  .service-split__media {
+    min-height: 17rem;
+  }
+}
