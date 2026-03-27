@@ -355,10 +355,33 @@ body[data-page="home"] .footer-nav a {
   }
 
   body[data-page="home"] .home-facts,
-  body[data-page="home"] .service-grid-home,
   body[data-page="home"] .calendar-list,
   body[data-page="home"] .footer-nav {
     grid-template-columns: 1fr;
+  }
+
+  body[data-page="home"] .service-grid-home {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(16.8rem, 82vw);
+    grid-template-columns: none;
+    gap: 0.8rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-inline: 0.1rem;
+    padding-bottom: 0.4rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+
+  body[data-page="home"] .service-grid-home::-webkit-scrollbar {
+    height: 0;
+  }
+
+  body[data-page="home"] .service-card-home {
+    min-width: 0;
+    scroll-snap-align: start;
   }
 
   body[data-page="home"] .home-fact,
