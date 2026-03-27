@@ -36,17 +36,17 @@ body[data-page="home"] .section {
 }
 
 body[data-page="home"] .hero {
-  min-height: min(100svh, 56rem);
+  min-height: min(100svh, 52rem);
 }
 
 body[data-page="home"] .hero__content {
-  padding-top: clamp(6.8rem, 12vh, 8.6rem);
-  padding-bottom: clamp(2.8rem, 7vh, 4.8rem);
+  padding-top: clamp(6.1rem, 10vh, 7.7rem);
+  padding-bottom: clamp(1.6rem, 4vh, 2.8rem);
 }
 
 body[data-page="home"] .hero__content--centered {
-  width: min(100%, 56rem);
-  gap: 0.82rem;
+  width: min(100%, 50rem);
+  gap: 0.68rem;
 }
 
 body[data-page="home"] .hero__subtitle {
@@ -76,16 +76,17 @@ body[data-page="home"] .hero-categories span {
 body[data-page="home"] .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-top: 0.45rem;
+  gap: 0.6rem;
+  margin-top: 0.35rem;
+  justify-content: center;
 }
 
 body[data-page="home"] .hero-button,
 body[data-page="home"] .button-link {
-  min-height: 2.9rem;
-  padding: 0.88rem 1.12rem;
-  font-size: 0.67rem;
-  letter-spacing: 0.17em;
+  min-height: 2.55rem;
+  padding: 0.72rem 0.92rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
 }
 
 body[data-page="home"] .button-link--ghost {
@@ -102,12 +103,17 @@ body[data-page="home"] .home-facts {
 }
 
 body[data-page="home"] .home-fact,
-body[data-page="home"] .service-card-home,
 body[data-page="home"] .press-feature,
 body[data-page="home"] .calendar-card {
   border: 1px solid var(--card-border);
   background: var(--card-bg);
   box-shadow: var(--shadow-soft);
+}
+
+body[data-page="home"] .service-card-home {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 body[data-page="home"] .home-fact {
@@ -168,8 +174,8 @@ body[data-page="home"] .service-grid-home {
 }
 
 body[data-page="home"] .service-card-home__body {
-  gap: 0.62rem;
-  padding: 0.98rem;
+  gap: 0.48rem;
+  padding: 0.82rem 0.2rem 0;
 }
 
 body[data-page="home"] .service-card-home__body h3 {
@@ -238,8 +244,28 @@ body[data-page="home"] .calendar-card strong {
 
 body[data-page="home"] .shop-endcap__media,
 body[data-page="home"] .bio-spotlight__portrait,
-body[data-page="home"] .section--pause .image-pause {
+body[data-page="home"] .section--pause .image-pause,
+body[data-page="home"] .service-card-home img {
   box-shadow: 0 28px 72px rgba(0, 0, 0, 0.32);
+}
+
+body[data-page="home"] .section--pause,
+body[data-page="home"] .section--dark,
+body[data-page="home"] .section--map {
+  position: relative;
+}
+
+body[data-page="home"] .section--pause::after,
+body[data-page="home"] .section--dark::after,
+body[data-page="home"] .section--map::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 7rem;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0.58) 55%, rgba(10, 10, 10, 0.94));
+  pointer-events: none;
 }
 
 body[data-page="home"] .shop-endcap__media {
@@ -315,12 +341,12 @@ body[data-page="home"] .footer-nav a {
   }
 
   body[data-page="home"] .hero {
-    min-height: auto;
+    min-height: 100svh;
   }
 
   body[data-page="home"] .hero__content {
-    padding-top: 6.05rem;
-    padding-bottom: 2rem;
+    padding-top: 5.6rem;
+    padding-bottom: 1.25rem;
   }
 
   body[data-page="home"] .hero__content--centered {
@@ -329,8 +355,8 @@ body[data-page="home"] .footer-nav a {
   }
 
   body[data-page="home"] .display--home-intro {
-    max-width: 7.8ch;
-    font-size: clamp(2rem, 8.4vw, 3.05rem);
+    max-width: 7.2ch;
+    font-size: clamp(1.86rem, 7.4vw, 2.65rem);
   }
 
   body[data-page="home"] .hero__subtitle {
@@ -351,16 +377,18 @@ body[data-page="home"] .footer-nav a {
 
   body[data-page="home"] .hero__actions {
     width: 100%;
-    gap: 0.5rem;
+    gap: 0.45rem;
+    justify-content: center;
   }
 
   body[data-page="home"] .hero__actions a {
-    width: 100%;
+    width: auto;
+    min-width: 8.7rem;
     justify-content: center;
-    min-height: 2.75rem;
-    padding: 0.78rem 0.92rem;
-    font-size: 0.64rem;
-    letter-spacing: 0.14em;
+    min-height: 2.55rem;
+    padding: 0.72rem 0.86rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
   }
 
   body[data-page="home"] .home-facts,
