@@ -296,8 +296,22 @@ body[data-page="home"] .bio-spotlight__portrait,
 body[data-page="home"] .shop-endcap__media,
 body[data-page="home"] .service-card-home img,
 body[data-page="home"] .map-stage {
-  border-radius: 0;
+  border-radius: 0 !important;
   overflow: hidden;
+}
+
+body[data-page="home"] .image-pause,
+body[data-page="home"] .image-pause::before,
+body[data-page="home"] .image-pause::after,
+body[data-page="home"] .image-pause img,
+body[data-page="home"] .image-pause--background,
+body[data-page="home"] .image-pause--background::before,
+body[data-page="home"] .image-pause--background::after,
+body[data-page="home"] .image-pause--background img {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
 body[data-page="home"] .section--pause .shell {
