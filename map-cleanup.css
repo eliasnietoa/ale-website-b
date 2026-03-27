@@ -1,0 +1,110 @@
+body[data-page="home"] .section--map {
+  position: relative;
+  overflow: hidden;
+}
+
+body[data-page="home"] .section--map::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(201, 152, 42, 0.08), transparent 24%),
+    radial-gradient(circle at 20% 32%, rgba(92, 10, 18, 0.08), transparent 20%);
+  pointer-events: none;
+}
+
+body[data-page="home"] .map-story {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1.6rem;
+}
+
+body[data-page="home"] .map-story__intro {
+  max-width: 38rem;
+}
+
+body[data-page="home"] .map-stage {
+  position: relative;
+  min-height: clamp(18rem, 42vw, 34rem);
+  margin-top: 0.5rem;
+}
+
+body[data-page="home"] .map-stage__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.9;
+  filter: saturate(0.96) contrast(1.02);
+}
+
+body[data-page="home"] .map-point {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.48rem;
+  color: rgba(237, 225, 211, 0.92);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
+}
+
+body[data-page="home"] .map-point::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, #EDE1D3 0 38%, #C9982A 39% 100%);
+  box-shadow:
+    0 0 0 0.32rem rgba(201, 152, 42, 0.1),
+    0 0 18px rgba(201, 152, 42, 0.36);
+}
+
+body[data-page="home"] .map-point--london { top: 27.5%; left: 40.8%; }
+body[data-page="home"] .map-point--paris { top: 31.2%; left: 42.9%; }
+body[data-page="home"] .map-point--cairo { top: 49.5%; left: 54.7%; }
+body[data-page="home"] .map-point--dubai { top: 50.5%; left: 63.2%; }
+
+@media (max-width: 900px) {
+  body[data-page="home"] .map-stage {
+    min-height: 16.5rem;
+  }
+
+  body[data-page="home"] .map-point {
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    gap: 0.34rem;
+  }
+
+  body[data-page="home"] .map-point::before {
+    width: 0.48rem;
+    height: 0.48rem;
+  }
+}
+
+@media (max-width: 640px) {
+  body[data-page="home"] .map-story {
+    gap: 1rem;
+  }
+
+  body[data-page="home"] .map-stage {
+    min-height: 13.4rem;
+    margin-inline: -0.1rem;
+  }
+
+  body[data-page="home"] .map-point {
+    font-size: 0.48rem;
+    letter-spacing: 0.1em;
+    gap: 0.22rem;
+  }
+
+  body[data-page="home"] .map-point::before {
+    width: 0.38rem;
+    height: 0.38rem;
+    box-shadow:
+      0 0 0 0.18rem rgba(201, 152, 42, 0.1),
+      0 0 10px rgba(201, 152, 42, 0.28);
+  }
+}

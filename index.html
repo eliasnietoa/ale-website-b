@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./homepage-cleanup.css" />
+    <link rel="stylesheet" href="./map-cleanup.css" />
   </head>
   <body data-page="home">
     <div class="site-grain"></div>
@@ -205,14 +206,14 @@
         </div>
       </section>
 
-      <section class="section shell">
-        <div class="map-showcase">
-          <div class="section-heading reveal">
+      <section class="section section--map">
+        <div class="shell map-story">
+          <div class="map-story__intro reveal">
             <p class="eyebrow">Global Presence</p>
             <h2 class="title">A moving presence across selected cities and invitations.</h2>
             <p class="copy">
               Touring signals, workshops, and cultural appearances live across a growing international route,
-              with Cairo, Paris, and London already shaping the visible map.
+              with Cairo, Paris, London, and Dubai shaping the visible map.
             </p>
             <div class="map-cities">
               <span>Cairo</span>
@@ -224,11 +225,12 @@
               <a class="button-link button-link--ghost" href="./global-presence.html">View Global Presence</a>
             </div>
           </div>
-          <div class="map-canvas reveal" aria-label="Selected cities map">
-            <span class="map-dot map-dot--london">London</span>
-            <span class="map-dot map-dot--paris">Paris</span>
-            <span class="map-dot map-dot--cairo">Cairo</span>
-            <span class="map-dot map-dot--dubai">Dubai</span>
+          <div class="map-stage reveal" aria-label="Selected cities map">
+            <img class="map-stage__image" src="./world-map-badra.svg" alt="World map centered on Europe and Africa" />
+            <span class="map-point map-point--london">London</span>
+            <span class="map-point map-point--paris">Paris</span>
+            <span class="map-point map-point--cairo">Cairo</span>
+            <span class="map-point map-point--dubai">Dubai</span>
           </div>
         </div>
       </section>
