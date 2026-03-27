@@ -59,7 +59,7 @@ body[data-page="home"] .section--pause {
 body[data-page="home"] .section--pause-background {
   padding-top: 0;
   padding-bottom: 0;
-  margin-top: -1.4rem;
+  margin-top: -8rem;
 }
 
 body[data-page="home"] .hero {
@@ -387,8 +387,8 @@ body[data-page="home"] .image-pause--background::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 28%;
-  background: linear-gradient(180deg, rgba(20, 12, 9, 0.9), rgba(20, 12, 9, 0.36) 44%, rgba(20, 12, 9, 0));
+  height: 48%;
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.96), rgba(12, 9, 8, 0.72) 24%, rgba(20, 12, 9, 0.34) 56%, rgba(20, 12, 9, 0));
   z-index: 1;
   pointer-events: none;
 }
@@ -528,7 +528,7 @@ body[data-page="home"] .footer-nav a {
   }
 
   body[data-page="home"] .section--pause-background {
-    margin-top: -0.8rem;
+    margin-top: -12rem;
   }
 
   body[data-page="home"] .section--pause .image-pause,
