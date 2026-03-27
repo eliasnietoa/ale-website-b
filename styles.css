@@ -2927,13 +2927,16 @@ body[data-page="home"] .hero__actions {
 
 .footer-nav {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, auto));
+  grid-template-columns: repeat(5, minmax(0, auto));
   justify-content: center;
-  gap: 0.9rem 1.2rem;
+  gap: 0.8rem 1rem;
+  align-items: start;
 }
 
 .footer-nav a {
   text-align: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
 }
 
 @media (max-width: 1100px) {
@@ -2944,14 +2947,21 @@ body[data-page="home"] .hero__actions {
   .home-facts {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .footer-nav {
+    grid-template-columns: repeat(4, minmax(0, auto));
+  }
 }
 
 @media (max-width: 900px) {
   .home-facts,
   .service-grid-home,
-  .calendar-list,
-  .footer-nav {
+  .calendar-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .map-canvas,
@@ -2962,23 +2972,49 @@ body[data-page="home"] .hero__actions {
 
 @media (max-width: 640px) {
   body[data-page="home"] .hero__content {
-    padding-top: clamp(6.8rem, 16vh, 8rem);
-    padding-bottom: 2.4rem;
+    padding-top: clamp(6.2rem, 15vh, 7.4rem);
+    padding-bottom: 2.1rem;
+  }
+
+  body[data-page="home"] .hero__content--centered {
+    gap: 0.72rem;
+    padding-inline: 0.7rem;
   }
 
   body[data-page="home"] .display--home-intro {
-    max-width: 8.8ch;
-    font-size: clamp(2.35rem, 10vw, 3.7rem);
+    max-width: 8.1ch;
+    font-size: clamp(2.05rem, 8.6vw, 3.2rem);
+  }
+
+  body[data-page="home"] .hero__subtitle {
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+  }
+
+  body[data-page="home"] .hero-categories {
+    gap: 0.45rem;
+    margin-top: 0.55rem;
+  }
+
+  body[data-page="home"] .hero-categories span {
+    padding: 0.36rem 0.56rem;
+    font-size: 0.54rem;
+    letter-spacing: 0.14em;
   }
 
   body[data-page="home"] .hero__actions {
     width: 100%;
-    gap: 0.65rem;
+    gap: 0.55rem;
+    margin-top: 0.5rem;
   }
 
   body[data-page="home"] .hero__actions a {
     width: 100%;
     justify-content: center;
+    min-height: 2.8rem;
+    padding: 0.82rem 0.95rem;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
   }
 
   .home-facts,
@@ -2989,7 +3025,29 @@ body[data-page="home"] .hero__actions {
   }
 
   .home-fact {
-    padding: 0.95rem 1rem;
+    padding: 0.9rem 0.95rem;
+  }
+
+  .home-fact strong {
+    font-size: 1rem;
+  }
+
+  .section-heading,
+  .bio-spotlight__content {
+    padding-left: 0.72rem;
+  }
+
+  .copy,
+  .service-card-home__body p,
+  .calendar-card p,
+  .footer-note {
+    font-size: 0.84rem;
+    line-height: 1.52;
+  }
+
+  .service-card-home__body h3,
+  .calendar-card strong {
+    font-size: 1.14rem;
   }
 
   .map-canvas,

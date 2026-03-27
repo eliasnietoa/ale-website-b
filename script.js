@@ -422,9 +422,17 @@ if (footerRoot) {
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <a href="./about.html">About</a>
+        <a href="./global-presence.html">Global Presence</a>
         <a href="./portfolio.html">Portfolio</a>
+        <a href="./performance.html">Performance</a>
         <a href="./services.html">Services</a>
+        <a href="./service-live-performance.html">Live Performance</a>
+        <a href="./service-acting.html">Acting</a>
+        <a href="./service-event-creator.html">Event Creator</a>
+        <a href="./service-creative-direction.html">Creative Direction</a>
+        <a href="./service-teaching.html">Teaching</a>
         <a href="./academy.html">Academy</a>
+        <a href="./cairo-experience.html">Cairo Experience</a>
         <a href="./shop.html">Shop</a>
         <a href="./press.html">Press</a>
         <a href="./booking.html">Work With Badra</a>
