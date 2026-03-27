@@ -36,12 +36,12 @@ body[data-page="home"] .section {
 }
 
 body[data-page="home"] .hero {
-  min-height: min(100svh, 52rem);
+  min-height: min(100svh, 50rem);
 }
 
 body[data-page="home"] .hero__content {
-  padding-top: clamp(6.1rem, 10vh, 7.7rem);
-  padding-bottom: clamp(1.6rem, 4vh, 2.8rem);
+  padding-top: clamp(5.35rem, 8vh, 6.8rem);
+  padding-bottom: clamp(1rem, 3vh, 1.8rem);
 }
 
 body[data-page="home"] .hero__content--centered {
@@ -83,16 +83,31 @@ body[data-page="home"] .hero__actions {
 
 body[data-page="home"] .hero-button,
 body[data-page="home"] .button-link {
-  min-height: 2.55rem;
-  padding: 0.72rem 0.92rem;
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
+  min-height: auto;
+  padding: 0.36rem 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--ivory);
+  justify-content: center;
+}
+
+body[data-page="home"] .hero-button::before,
+body[data-page="home"] .button-link::before {
+  display: none;
+}
+
+body[data-page="home"] .hero-button {
+  color: var(--gold-bright);
 }
 
 body[data-page="home"] .button-link--ghost {
-  background: rgba(14, 12, 12, 0.52);
-  border: 1px solid rgba(201, 152, 42, 0.14);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 body[data-page="home"] .home-facts {
@@ -104,12 +119,7 @@ body[data-page="home"] .home-facts {
 
 body[data-page="home"] .home-fact,
 body[data-page="home"] .press-feature,
-body[data-page="home"] .calendar-card {
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
-  box-shadow: var(--shadow-soft);
-}
-
+body[data-page="home"] .calendar-card,
 body[data-page="home"] .service-card-home {
   border: 0;
   background: transparent;
@@ -246,15 +256,27 @@ body[data-page="home"] .shop-endcap__media,
 body[data-page="home"] .bio-spotlight__portrait,
 body[data-page="home"] .section--pause .image-pause,
 body[data-page="home"] .service-card-home img {
-  box-shadow: 0 28px 72px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 20px 54px rgba(0, 0, 0, 0.22);
 }
 
+body[data-page="home"] .image-pause,
+body[data-page="home"] .bio-spotlight__portrait,
+body[data-page="home"] .shop-endcap__media,
+body[data-page="home"] .service-card-home img,
+body[data-page="home"] .map-stage {
+  border-radius: 0;
+  overflow: visible;
+}
+
+body[data-page="home"] .section,
 body[data-page="home"] .section--pause,
 body[data-page="home"] .section--dark,
 body[data-page="home"] .section--map {
   position: relative;
+  background: transparent;
 }
 
+body[data-page="home"] .section::after,
 body[data-page="home"] .section--pause::after,
 body[data-page="home"] .section--dark::after,
 body[data-page="home"] .section--map::after {
@@ -263,8 +285,8 @@ body[data-page="home"] .section--map::after {
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 7rem;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0.58) 55%, rgba(10, 10, 10, 0.94));
+  height: 9rem;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0.26) 38%, rgba(10, 10, 10, 0.56) 68%, rgba(10, 10, 10, 0.86));
   pointer-events: none;
 }
 
@@ -345,8 +367,8 @@ body[data-page="home"] .footer-nav a {
   }
 
   body[data-page="home"] .hero__content {
-    padding-top: 5.6rem;
-    padding-bottom: 1.25rem;
+    padding-top: 4.95rem;
+    padding-bottom: 0.85rem;
   }
 
   body[data-page="home"] .hero__content--centered {
@@ -383,11 +405,11 @@ body[data-page="home"] .footer-nav a {
 
   body[data-page="home"] .hero__actions a {
     width: auto;
-    min-width: 8.7rem;
+    min-width: auto;
     justify-content: center;
-    min-height: 2.55rem;
-    padding: 0.72rem 0.86rem;
-    font-size: 0.6rem;
+    min-height: auto;
+    padding: 0.28rem 0;
+    font-size: 0.58rem;
     letter-spacing: 0.12em;
   }
 
