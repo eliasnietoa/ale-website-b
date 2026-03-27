@@ -59,7 +59,7 @@ body[data-page="home"] .section--pause {
 body[data-page="home"] .section--pause-background {
   padding-top: 0;
   padding-bottom: 0;
-  margin-top: -8rem;
+  margin-top: -10rem;
 }
 
 body[data-page="home"] .hero {
@@ -387,8 +387,10 @@ body[data-page="home"] .image-pause--background::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 48%;
-  background: linear-gradient(180deg, rgba(8, 8, 8, 0.96), rgba(12, 9, 8, 0.72) 24%, rgba(20, 12, 9, 0.34) 56%, rgba(20, 12, 9, 0));
+  height: 62%;
+  background:
+    linear-gradient(180deg, rgba(8, 8, 8, 0.98), rgba(12, 9, 8, 0.82) 18%, rgba(18, 12, 10, 0.56) 38%, rgba(20, 12, 9, 0.22) 62%, rgba(20, 12, 9, 0)),
+    radial-gradient(circle at center top, rgba(92, 10, 18, 0.1), transparent 52%);
   z-index: 1;
   pointer-events: none;
 }
@@ -433,10 +435,10 @@ body[data-page="home"] .hero::after {
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 14rem;
+  height: 22rem;
   background:
-    linear-gradient(180deg, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0.06) 20%, rgba(10, 10, 10, 0.24) 44%, rgba(20, 12, 9, 0.56) 72%, rgba(20, 12, 9, 0.9)),
-    radial-gradient(circle at center bottom, rgba(92, 10, 18, 0.1), transparent 58%);
+    linear-gradient(180deg, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0.06) 14%, rgba(10, 10, 10, 0.18) 28%, rgba(14, 10, 9, 0.4) 46%, rgba(20, 12, 9, 0.7) 68%, rgba(20, 12, 9, 0.98)),
+    radial-gradient(circle at center bottom, rgba(92, 10, 18, 0.16), transparent 58%);
   pointer-events: none;
   z-index: 2;
 }
