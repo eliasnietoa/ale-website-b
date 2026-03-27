@@ -260,9 +260,12 @@ body[data-page="home"] .calendar-card strong {
 
 body[data-page="home"] .shop-endcap__media,
 body[data-page="home"] .bio-spotlight__portrait,
-body[data-page="home"] .section--pause .image-pause,
 body[data-page="home"] .service-card-home img {
   box-shadow: 0 20px 54px rgba(0, 0, 0, 0.22);
+}
+
+body[data-page="home"] .section--pause .image-pause {
+  box-shadow: none;
 }
 
 body[data-page="home"] .image-pause,
@@ -272,6 +275,28 @@ body[data-page="home"] .service-card-home img,
 body[data-page="home"] .map-stage {
   border-radius: 0;
   overflow: hidden;
+}
+
+body[data-page="home"] .section--pause .shell {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: none;
+}
+
+body[data-page="home"] .section--pause .image-pause {
+  position: relative;
+  width: 100%;
+  min-height: clamp(22rem, 48vw, 38rem);
+  margin: 0;
+}
+
+body[data-page="home"] .section--pause .image-pause img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: saturate(0.92) contrast(1.04) brightness(0.82);
 }
 
 body[data-page="home"] .image-pause::after,
@@ -285,6 +310,21 @@ body[data-page="home"] .map-stage::after {
   height: 42%;
   background: linear-gradient(180deg, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0.16) 24%, rgba(10, 10, 10, 0.52) 62%, rgba(10, 10, 10, 0.84));
   pointer-events: none;
+}
+
+body[data-page="home"] .section--pause .image-pause::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 34%;
+  background: linear-gradient(180deg, rgba(18, 11, 9, 0.96), rgba(18, 11, 9, 0.48) 42%, rgba(18, 11, 9, 0));
+  pointer-events: none;
+  z-index: 1;
+}
+
+body[data-page="home"] .section--pause .image-pause::after {
+  height: 48%;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0.14) 22%, rgba(10, 10, 10, 0.46) 58%, rgba(10, 10, 10, 0.92));
 }
 
 body[data-page="home"] .section,
@@ -407,8 +447,12 @@ body[data-page="home"] .footer-nav a {
   }
 
   body[data-page="home"] .section--pause {
-    margin-top: -10rem;
-    padding-top: 11.2rem;
+    margin-top: -10.5rem;
+    padding-top: 11.6rem;
+  }
+
+  body[data-page="home"] .section--pause .image-pause {
+    min-height: 16.5rem;
   }
 
   body[data-page="home"] .hero__content--centered {
