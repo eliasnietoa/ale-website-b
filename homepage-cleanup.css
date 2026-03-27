@@ -628,7 +628,17 @@ body[data-page="home"] .footer-nav a {
 
   body[data-page="home"] .section-heading,
   body[data-page="home"] .bio-spotlight__content {
-    padding-left: 0.72rem;
+    padding-left: 0.92rem;
+  }
+
+  body[data-page="home"] .bio-spotlight__content::before {
+    top: -0.15rem;
+    bottom: -0.2rem;
+  }
+
+  body[data-page="home"] .bio-spotlight__content::after {
+    top: -0.15rem;
+    width: 3.15rem;
   }
 
   body[data-page="home"] .title {
