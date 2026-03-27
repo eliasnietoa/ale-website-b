@@ -664,6 +664,60 @@ body[data-page="home"] .footer-nav a {
     margin-top: 1.45rem;
   }
 
+  body[data-page="home"] .shop-endcap {
+    display: block;
+    position: relative;
+    min-height: 100svh;
+  }
+
+  body[data-page="home"] .shop-endcap__media {
+    position: absolute;
+    inset: 0;
+    min-height: 100%;
+    z-index: 0;
+    box-shadow: none !important;
+  }
+
+  body[data-page="home"] .shop-endcap__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 28%;
+    filter: saturate(0.92) contrast(1.04) brightness(0.78);
+  }
+
+  body[data-page="home"] .shop-endcap__media::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 30%;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.96), rgba(10, 10, 10, 0.42) 48%, rgba(10, 10, 10, 0));
+    z-index: 1;
+  }
+
+  body[data-page="home"] .shop-endcap__media::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 38%;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0.16) 24%, rgba(10, 10, 10, 0.52) 62%, rgba(10, 10, 10, 0.9));
+    z-index: 1;
+  }
+
+  body[data-page="home"] .shop-endcap .section-heading {
+    position: relative;
+    z-index: 2;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2.4rem;
+  }
+
+  body[data-page="home"] .shop-endcap .cta-row {
+    justify-content: center;
+  }
+
   body[data-page="home"] .title {
     font-size: clamp(1.55rem, 6.8vw, 2.3rem);
   }
